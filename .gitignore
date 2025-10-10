@@ -1,0 +1,35 @@
+# Binários compilados
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binário de teste
+*.test
+
+# Arquivos de cobertura
+*.out
+*.cover
+
+# Diretório de dependências (se você não commita o vendor)
+# Descomente a linha abaixo se você usa 'go mod vendor' e não quer versionar o diretório
+# vendor/
+
+# Arquivos de configuração de IDEs e editores
+.idea/
+.vscode/
+*.swp
+*~
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Variáveis de ambiente locais
+.env
+.env.*
+!.env.example
