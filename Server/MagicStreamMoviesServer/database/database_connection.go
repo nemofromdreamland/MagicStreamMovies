@@ -38,7 +38,7 @@ func Connect() *mongo.Client {
 
 }
 
-var Client
+var Client *mongo.Client = Connect()
 
 func OpenCollection(collectionName string) *mongo.Collection {
 	err := godotenv.Load(".env")
@@ -51,6 +51,10 @@ func OpenCollection(collectionName string) *mongo.Collection {
 
 	fmt.Println("DATABASE_NAME", databaseName)
 
-	collection :=
-	if collection == nil {}
+	collection := Client.Database(databaseName).Collection(collectionName)
+
+	if collection == nil {
+		return nil
+	}
+	return collection
 }
